@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Dark Theme</title>
+
+    <link rel="stylesheet" href="../dist/reveal.js" />
+    <link rel="stylesheet" href="../dist/reveal.css" />
+    <link rel="stylesheet" href="../dist/theme/black.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="../plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+
+    <style>
+      .reveal p {
+        margin: 0;
+      }
+
+      .reveal img {
+        margin: 0;
+        border-radius: 15px;
+      }
+
+      /*********************************************
+      * NAVIGATION CONTROLS OVERRIDE
+      *********************************************/
+      .reveal .controls {
+        color: #bb86fc;
+      }
+
+      /*********************************************
+      * PROGRESS BAR OVERRIDE
+      *********************************************/
+      .reveal .progress {
+        background: rgba(0, 0, 0, 0.2);
+        color: #bb86fc;
+      }
+
+      .slide--container {
+        height: 600px;
+        background-color: rgba(255, 255, 255, 0.11);
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.14),
+          0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 49px 46px 48px;
+        box-sizing: border-box;
+        border-radius: 15px;
+      }
+      .slide--row {
+        display: flex;
+        flex-grow: 1;
+      }
+      .slide--text-light {
+        font-family: "Roboto";
+        color: rgba(255, 255, 255, 0.87);
+        text-align: center;
+      }
+      .slide--text-medium {
+        font-family: "Roboto";
+        color: rgba(255, 255, 255, 0.6);
+        text-align: center;
+      }
+      .slide--surface {
+        background-color: #121212;
+      }
+      .slide--text-primary {
+        font-family: "Roboto";
+        color: #bb86fc;
+        text-align: center;
+      }
+
+      .title--background {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .title--title {
+        font-size: 48px;
+        font-weight: 700;
+      }
+      .title--text {
+        font-size: 25px;
+        font-weight: 400;
+      }
+      .title--client-logo {
+        margin: 100px 0 15px 0;
+        width: 100px;
+        height: 100px;
+        border-radius: 15px;
+        background-color: #fff;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .overview--background {
+        height: 100%;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .overview--title {
+        font-size: 25px;
+        font-weight: 700;
+        padding-bottom: 35px;
+      }
+      .overview--table {
+        border-radius: 15px;
+        flex-grow: 1;
+        background-color: rgba(255, 255, 255, 0.05);
+        box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14),
+          0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px;
+      }
+      .overview--row {
+        justify-content: space-around;
+        flex-grow: 0;
+        width: 100%;
+      }
+      .overview--card-background {
+        border-radius: 15px;
+      }
+      .overview--card {
+        height: 150px;
+        width: 250px;
+        background-color: rgba(255, 255, 255, 0.05);
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+          0px 2px 1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .overview--card-title {
+        font-size: 18px;
+        font-weight: 400;
+        padding-bottom: 15px;
+      }
+      .overview--card-text {
+        font-size: 25px;
+        font-weight: 400;
+      }
+      .overview--card-text-2 {
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      .end--background {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .end--title {
+        font-size: 48px;
+        font-weight: 700;
+      }
+      .end--text {
+        font-size: 20px;
+        font-weight: 400;
+      }
+      .end--client-logo {
+        height: 50px;
+        width: 50px;
+        border-radius: 10px;
+        background-color: #fff;
+        margin-right: 25px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .end--client--container {
+        margin-top: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+
+    <script></script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <div class="slide--container">
+            <div class="title--background">
+              <p
+                class="slide--text-light title--title"
+                data-text="report.title"
+              >
+                Social Media Report
+              </p>
+              <p
+                class="slide--text-medium title--text"
+                data-text="report.timeframe"
+              >
+                October - November
+              </p>
+              <div class="title--client-logo">
+                <img
+                  data-image="client.logo"
+                  src="../assets/placeholder.png"
+                  alt=""
+                />
+              </div>
+              <p class="slide--text-light title--text" data-text="client.name">
+                Acme Inc
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="slide--container">
+            <div class="overview--background">
+              <p class="slide--text-light overview--title">
+                <span data-text="report.start[month]">October</span>
+                overview
+              </p>
+              <div class="overview--table">
+                <div class="slide--row overview--row">
+                  <div class="slide--surface overview--card-background">
+                    <div class="overview--card">
+                      <p class="slide--text-medium overview--card-title">FOLLOWERS</p>
+                      <p
+                        class="slide--text-light overview--card-text"
+                        data-metric="social.followers.total"
+                      >
+                        102,546
+                      </p>
+                      <p class="slide--text-primary overview--card-text-2">
+                        +<span data-metric="social.followers.new">1,043</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="slide--surface overview--card-background">
+                    <div class="overview--card">
+                      <p class="slide--text-medium overview--card-title">IMPRESSIONS</p>
+                      <p
+                        class="slide--text-light overview--card-text"
+                        data-metric="social.followers.total"
+                      >
+                        1,230,594
+                      </p>
+                      <p class="slide--text-primary overview--card-text-2">
+                        <span data-metric="social.followers.new">738,043</span> Paid
+                      </p>
+                      <p class="slide--text-primary overview--card-text-2">
+                        <span data-metric="social.followers.new">245,104</span> Organic
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide--row overview--row">
+                  <div class="slide--surface overview--card-background">
+                    <div class="overview--card"></div>
+                  </div>
+                  <div class="slide--surface overview--card-background">
+                    <div class="overview--card"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="slide--container">
+            <div class="end--background">
+              <p class="slide--text-light end--title">THANK YOU!</p>
+              <div class="end--client--container">
+                <div class="end--client-logo">
+                  <img
+                    data-image="client.logo"
+                    src="../assets/placeholder.png"
+                    alt=""
+                  />
+                </div>
+                <p class="slide--text-light end--text" data-text="client.name">
+                  Acme Inc
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="../dist/reveal.js"></script>
+    <script src="../plugin/markdown/markdown.js"></script>
+    <script src="../plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight],
+      });
+    </script>
+  </body>
+</html>
