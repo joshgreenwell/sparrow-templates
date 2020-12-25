@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Template</title>
+
+    <link rel="stylesheet" href="../dist/reveal.js" />
+    <link rel="stylesheet" href="../dist/reveal.css" />
+    <!-- Theme options: black, ... , moon -->
+    <link
+      rel="stylesheet"
+      href="../dist/theme/black.css"
+      id="theme"
+    />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="../plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+
+    <style>
+      /* Your custom styles here */
+    </style>
+
+    <script>
+      // Your custom javascript here
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>Slide 1</section>
+        <section>
+          <section>Slide 2.1</section>
+          <section>Slide 2.2</section>
+        </section>
+      </div>
+    </div>
+
+    <script src="../dist/reveal.js"></script>
+    <script src="../plugin/markdown/markdown.js"></script>
+    <script src="../plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight],
+      });
+    </script>
+  </body>
+</html>
