@@ -9,44 +9,77 @@
 
     <title>Template</title>
 
-    <link rel="stylesheet" href="../dist/reveal.js" />
-    <link rel="stylesheet" href="../dist/reveal.css" />
+    <link rel="stylesheet" href="../reveal.js/dist/reveal.js" />
+    <link rel="stylesheet" href="../reveal.js/dist/reveal.css" />
     <!-- Theme options: black, ... , moon -->
-    <link
-      rel="stylesheet"
-      href="../dist/theme/black.css"
-      id="theme"
-    />
+    <link rel="stylesheet" href="../reveal.js/dist/theme/black.css" id="theme" />
 
     <!-- Theme used for syntax highlighted code -->
     <link
       rel="stylesheet"
-      href="../plugin/highlight/monokai.css"
+      href="../reveal.js/plugin/highlight/monokai.css"
       id="highlight-theme"
     />
 
     <style>
-      /* Your custom styles here */
+      /*********************************************
+      * NAVIGATION CONTROLS OVERRIDE
+      *********************************************/
+      .reveal .controls {
+        color: #bb86fc;
+      }
+
+      /*********************************************
+      * PROGRESS BAR OVERRIDE
+      *********************************************/
+      .reveal .progress {
+        background: rgba(0, 0, 0, 0.2);
+        color: #bb86fc;
+      }
+
+      .title-text {
+        border-radius: 15px;
+        background-color: rgba(255, 255, 255, 0.05);
+      }
     </style>
 
-    <script>
-      // Your custom javascript here
+    <script type="text/javascript">
+      var a = function() {
+        return 1;
+      }
+      console.log('Testing JS', a())
     </script>
+
+
+    <!-- ES6 Version (requires babel)
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.0.0-beta.3/babel.min.js"></script>
+    <script type="text/babel">
+      const a = () => 1
+      console.log(`Testing ES6 ${a()}`)
+    </script>
+    -->
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
-        <section>Slide 1</section>
         <section>
-          <section>Slide 2.1</section>
-          <section>Slide 2.2</section>
+          <h1>Slide 1</h1>
+        </section>
+        <section>
+          <section>
+            <h1>Slide 2.1</h1>
+            <img src="./assets/placeholder.png" width="100px"/>
+          </section>
+          <section>
+            <h1>Slide 2.2</h1>
+          </section>
         </section>
       </div>
     </div>
 
-    <script src="../dist/reveal.js"></script>
-    <script src="../plugin/markdown/markdown.js"></script>
-    <script src="../plugin/highlight/highlight.js"></script>
+    <script src="../reveal.js/dist/reveal.js"></script>
+    <script src="../reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="../reveal.js/plugin/highlight/highlight.js"></script>
     <script>
       Reveal.initialize({
         hash: true,
